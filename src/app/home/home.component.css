@@ -1,0 +1,10 @@
+@import "bootstrap/dist/css/bootstrap.css";
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.container {
+  margin-top: 200px;
+}
