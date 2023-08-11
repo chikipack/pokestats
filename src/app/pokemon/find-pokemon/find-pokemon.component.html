@@ -7,6 +7,15 @@
         </div>
     </div>
 </div>
-<div *ngIf="pokedexInfo">
-    <img [src]="pokedexInfo.sprites.front_default" alt="Image Description">
+<div class="d-flex">
+    <div class="col-md-6">
+        <div *ngIf="pokedexInfo">
+            <img [src]="pokedexInfo.sprites.front_default" alt="Image Description" class="w-100">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
 </div>
