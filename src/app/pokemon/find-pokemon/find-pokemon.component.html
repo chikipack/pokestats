@@ -1,1 +1,12 @@
-<p>find-pokemon works!</p>
+<div class="container text-center">
+    <div class="d-flex flex-column justify-content-between">
+        <div class="d-flex my-2">
+            <div class="flex-fill mx-1 col-3">
+                <button class="w-75" mat-raised-button (click)="getNewPokemon()">Find New Pokemon</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="pokedexInfo">
+    <img [src]="pokedexInfo.sprites.front_default" alt="Image Description">
+</div>
