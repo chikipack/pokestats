@@ -1,9 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { authGuard } from './auth/auth.guard';
+import { LoginComponent } from './auth/login/login/login.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    canActivate: [],
+    component: LoginComponent,
+  },
+  {
+    path: 'home',
+    canActivate: [authGuard],
+    component: HomeComponent,
+  },
   {
     path: 'pokemon',
     loadChildren: () =>
